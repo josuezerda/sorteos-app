@@ -31,13 +31,18 @@ export async function loginAction(formData: FormData) {
       }
     );
 
+    if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+      return { error: 'Las variables de entorno de Supabase no están configuradas en Vercel.' };
+    }
+
     const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
 
     if (error) {
-      return { error: 'Credenciales inválidas' };
+      console.error("Supabase Auth Error:", error);
+      return { error: `Credenciales inválidas o error de auth: ${error.message}` };
     }
 
     return { success: true };
