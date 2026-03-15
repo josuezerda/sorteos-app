@@ -189,8 +189,9 @@ export default function PublicPlayClient({ campaign }: { campaign: any }) {
       void reel.offsetHeight;
 
       setTimeout(() => {
+        const itemHeight = reel.children[0] ? (reel.children[0] as HTMLElement).offsetHeight : 120;
         reel.style.transition = `transform ${spinDuration + delay}ms cubic-bezier(0.15, 0.85, 0.2, 1)`;
-        reel.style.transform = `translateY(-${120 * totalTurns}px)`; // 120px height per item
+        reel.style.transform = `translateY(-${itemHeight * totalTurns}px)`;
       }, 50);
     };
 
