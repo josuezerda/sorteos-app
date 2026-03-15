@@ -13,12 +13,18 @@ export default function LoginPage() {
     setIsLoading(true);
     setErrorMsg('');
     const formData = new FormData(e.currentTarget);
-    const res = await loginAction(formData);
-    if (res?.error) {
-      setErrorMsg(res.error);
+    try {
+      const res = await loginAction(formData);
+      if (res?.error) {
+        setErrorMsg(res.error);
+        setIsLoading(false);
+      } else if (res?.success) {
+        window.location.href = '/admin';
+      }
+    } catch (err) {
+      setErrorMsg('Error de conexión.');
       setIsLoading(false);
     }
-    // if successful, loginAction will redirect automatically
   };
 
   return (
