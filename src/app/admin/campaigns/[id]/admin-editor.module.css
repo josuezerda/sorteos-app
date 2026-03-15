@@ -1,0 +1,165 @@
+.editorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+  margin-bottom: 2rem;
+}
+
+.tab {
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: all 0.2s ease;
+  background: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 1rem;
+}
+
+.tab:hover {
+  color: #0f172a;
+}
+
+.tabActive {
+  color: #3b82f6;
+  border-bottom-color: #3b82f6;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #334155;
+  font-size: 0.875rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+  color: #0f172a;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.select {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+  color: #0f172a;
+  background-color: #ffffff;
+}
+
+.buttonSubmit {
+  background-color: #10b981;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.buttonSubmit:hover {
+  background-color: #059669;
+}
+
+.buttonSubmit:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.buttonDanger {
+  background-color: #ef4444;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.buttonDanger:hover {
+  background-color: #dc2626;
+}
+
+/* Prizes List */
+.prizeCard {
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: #f8fafc;
+}
+
+.prizeInfo strong {
+  display: block;
+  font-size: 1.125rem;
+  color: #0f172a;
+}
+
+.prizeInfo span {
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+/* Slot Images Grid */
+.imagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.imageBox {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8fafc;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.imageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageBox:hover {
+  border-color: #3b82f6;
+}
