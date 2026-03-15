@@ -37,24 +37,27 @@
 }
 
 .header {
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  gap: 1rem;
+  text-align: center;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .campaignTitle {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin: 0;
   color: #f8fafc;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .mainContent {

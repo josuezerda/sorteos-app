@@ -54,7 +54,7 @@ export default async function PublicCampaignPage({ params }: { params: Promise<{
       <div className={styles.overlay}>
         <header className={styles.header}>
           <div className={styles.logo}>
-            <img src="/logo.png" alt="Sorteos Logo" style={{ height: '50px', objectFit: 'contain' }} />
+            <img src="/fusion_ia_logo.png" alt="Sorteos Logo" style={{ height: '70px', objectFit: 'contain' }} />
           </div>
           <h1 className={styles.campaignTitle}>{campaign.name}</h1>
         </header>
