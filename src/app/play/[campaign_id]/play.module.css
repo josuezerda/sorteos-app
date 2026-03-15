@@ -63,6 +63,7 @@
   justify-content: center;
   align-items: center;
   padding: 2rem;
+  overflow-y: auto;
 }
 
 .footer {
@@ -82,10 +83,17 @@
 }
 
 @media (max-width: 900px) {
+  .mainContent {
+    align-items: flex-start; /* Prevents vertical centering from crushing content and overlapping */
+    padding: 1rem;
+  }
+
   .splitLayout {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
   
   .stepRegister .leftColumn {
@@ -103,8 +111,9 @@
   }
 
   .machineFrame {
-    padding: 0.5rem;
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
     gap: 0.5rem;
+    margin-top: 1rem;
   }
 
   .reel {
@@ -117,14 +126,14 @@
   }
 
   .machineFrame::before {
-    font-size: 0.875rem;
-    padding: 0.25rem 1rem;
-    top: -24px;
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    top: -20px;
   }
   
   .leverContainer {
-    right: -40px !important;
-    transform: scale(0.8) translateY(-50%) !important;
+    right: -35px !important;
+    transform: scale(0.65) translateY(-50%) !important;
   }
 }
 
@@ -132,12 +141,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .rightColumn {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 /* Registration Form */
